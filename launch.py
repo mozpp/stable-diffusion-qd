@@ -219,7 +219,7 @@ def run_extensions_installers(settings_file):
 def prepare_environment():
     global skip_install
 
-    torch_command = os.environ.get('TORCH_COMMAND', "pip install torch-1.13.1+cu117-cp310-cp310-win_amd64.whl torchvision==0.14.1+cu117 \
+    torch_command = os.environ.get('TORCH_COMMAND', "pip install torch-1.13.1+cu117-cp310-cp310*.whl torchvision==0.14.1+cu117 \
     --extra-index-url https://download.pytorch.org/whl/cu117 -i https://pypi.tuna.tsinghua.edu.cn/simple")
     requirements_file = os.environ.get('REQS_FILE', "requirements_versions.txt")
     commandline_args = os.environ.get('COMMANDLINE_ARGS', "")
